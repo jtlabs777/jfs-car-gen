@@ -1,6 +1,6 @@
 # JAVA Car Generator  
 
-* **Objective** - JAVA program that crates various car models and features. 
+* **Objective** - JAVA program that creates various car models and features. 
 * **Purpose** - To establish familiarity with JAVA classes and Junit testing syntax via intelliJ's IDE.
 
 
