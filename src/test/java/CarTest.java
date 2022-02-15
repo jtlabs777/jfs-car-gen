@@ -7,6 +7,9 @@ import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
@@ -156,16 +159,23 @@ public class CarTest {
     public void  convertToElectric3() {
         //setup
         boolean results;
+        String userMsg  = "The car is already electric\r\n";
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream(); //create a new io stream
+        System.setOut(new PrintStream(outContent));//set system stream to new io
+        PrintStream originalOut = System.out;// save original stream
+
         civic.setIsElectric(true);
         //exercise
         results = civic.convertToElectric();
 
-        assertTrue(results == true);
+        assertEquals(userMsg, outContent.toString());
 
 
         //teardown
 
         civic.setIsElectric(false);
+        System.setOut(originalOut);//set back to original stream
+
     }
 
 
