@@ -138,7 +138,7 @@ public class CarTest {
     }
 
     @Test
-    @Description("convertToElectric should flip value on the boolean isElectric and return new value")
+    @Description("convertToElectric should set isElectric to true if car is not electric and then return value")
     public void  convertToElectric2() {
         //setup
         boolean results;
