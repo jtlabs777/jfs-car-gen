@@ -10,4 +10,4 @@
   
 *  **Lessons Learned**
 
- I went above what the project called for and decided to write the program using TDD methodology. This helped give me a more intuitive understanding of Mosha and Junit syntax.
+ I went above what the project called for and decided to write the program using TDD methodology. This helped give me a more intuitive understanding of Maven and J-Unit syntax.
